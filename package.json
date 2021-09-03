@@ -12,7 +12,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    
     "deploy":"gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
