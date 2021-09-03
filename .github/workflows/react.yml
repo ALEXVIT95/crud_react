@@ -30,11 +30,10 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run the tests
-      run: npm test
-
-    - name: Build
-      run: npm run build
+    - name: registry github user
+      run: |
+        git config --global user.email <email>
+        git config --global user.name <name
       
     - name: deploy the app
       run: npm run deploy
