@@ -13,6 +13,13 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
+- task: AzureFunctionApp@2
+  inputs:
+    azureSubscription: 'Azure para estudiantes (0437d3a3-f455-44b2-bf87-8670a1339e19)'
+    appType: 'functionAppLinux'
+    appName: 'az_prueba'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
   displayName: 'Install Node.js'
 
 - script: |
